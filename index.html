@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/32a24565d7.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="dashboard-wrapper">
+        <header class="header-wrapper">
+            <div class="indicator-container header-wrapper--item">
+                <h2 class="indicator-container--title">MARKET</h2>
+                <h1 class="indicator-container--main">Bullish</h1>
+                <p class="indicator-container--trend-up">0.807% <i class="fa-solid fa-arrow-up"></i></p>
+            </div>
+            <div class="indicator-container header-wrapper--item">
+                <h2 class="indicator-container--title">LEADER</h2>
+                <h1 class="indicator-container--main">QQQ</h1>
+                <p class="indicator-container--trend-up">0.96% <i class="fa-solid fa-arrow-up"></i></p>
+            </div>
+            <div class="indicator-container header-wrapper--item">
+                <h2 class="indicator-container--title">HOTTEST SECTOR</h2>
+                <h1 class="indicator-container--main">Utilities</h1>
+                <p class="indicator-container--trend-up">3.00% <i class="fa-solid fa-arrow-up"></i></p>
+            </div>
+            <div class="indicator-container header-wrapper--item">
+                <h2 class="indicator-container--title">WORST SECTOR</h2>
+                <h1 class="indicator-container--main">Energy</h1>
+                <p class="indicator-container--trend-down">-1.53% <i class="fa-solid fa-arrow-down"></i></p>
+            </div>
+            <div class="indicator-container header-wrapper--item">
+                <h2 class="indicator-container--title">TOP STOCK</h2>
+                <h1 class="indicator-container--main">SPOT</h1>
+                <p class="indicator-container--trend-up">10.14% <i class="fa-solid fa-arrow-up"></i></p>
+            </div>
+            <div class="indicator-container header-wrapper--item">
+                <h2 class="indicator-container--title">WORST STOCK</h2>
+                <h1 class="indicator-container--main">BCS</h1>
+                <p class="indicator-container--trend-down">-7.05% <i class="fa-solid fa-arrow-down"></i></p>
+            </div>
+        </header>
+        <main>
+            <div class="main-wrapper">
+                <div>
+                    
+                    <div id="index-chart-wrapper">
+                        <h2 class="container-heading">Index Change</h2>
+                        <svg width="800" height="400" id="indexChart"></svg>
+                    </div>
+                </div>
+                <div>
+                    
+                    <div id="company-bar-chart-wrapper">
+                        <h2 class="container-heading">Price Changes</h2>
+                        <svg id="companyChart"></svg>
+                    </div>
+                </div>
+            </div>
+            <div id="tooltip"></div>
+        </main>
+        <footer>
+                <div id="heatmap-wrapper">
+                    <h2 class="container-heading">Volumes on Each Day</h2>
+                    <svg id="heatmapSVG"></svg>
+                </div>
+        </footer>
+    </div>
+        
+    
+    <script src="main.js" type="module"></script>
+</body>
+</html>
