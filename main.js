@@ -152,7 +152,7 @@ function createLineChart() {
     // Determine dynamic width and height based on the parent container
     const container = d3.select("#index-chart-wrapper");
     const width = container.node().getBoundingClientRect().width;
-    const height = 400; // You can adjust this or make it dynamic based on the container as well
+    const height = width*(6/11) < 400 ? 400: width*(6/11); // You can adjust this or make it dynamic based on the container as well
 
     // Update SVG size
     svg.attr('width', width).attr('height', height);
